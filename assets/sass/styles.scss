@@ -1,0 +1,170 @@
+@import '../variables/_main.scss';
+@include reset;
+
+
+.centrar{
+    max-width: 90rem;
+    margin: 0 auto;
+    box-shadow: 0px 0px 11px 16px rgba(0,0,0,0.2);
+}
+
+header{
+    background-color: $main-blue;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div{
+        width: 10rem;
+        height: 100%;
+    }
+
+    .btn-group-mobile{
+        width: 3rem;
+        height: 3rem;
+        .btn-group{
+            width: 3rem;
+            height: 3rem;
+                #btnGroupDrop1{
+                    padding: 0;
+                    border-radius: 5%;
+                    div{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+        }
+    }
+    nav{
+        ul{
+            display: flex;
+            padding: 0%;
+            margin: 0%;
+            li{
+                margin: 1rem;
+                a{
+                    color: black;
+                }
+            }
+            
+        }
+    }
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    background-color: $main-green;
+    
+    h1{
+        align-self: center;
+    }
+
+    .contenedor{
+        position: relative;
+
+        h3{
+            position: absolute;
+            bottom: 50%;
+            background-color:$main-bk-font;
+            color: azure;
+        }
+    }
+}
+
+.destinos{
+    .cont-destinos{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        .imagen{
+            position: relative;
+            width: 20rem;
+            height: 15rem;
+            margin: 1rem;
+            p{
+                position: absolute;
+                font-size: 2rem;
+                background-color: $main-bk-font;
+                color: azure;
+            }
+        }
+    }
+}
+
+.populares{
+   
+    .cont-populares{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        .imagen{
+            position: relative;
+            width: 20rem;
+            height: 15rem;
+            margin: 1rem;
+            p{
+                position: absolute;
+                font-size: 2rem;
+                background-color: $main-bk-font;
+                color: azure;
+            }
+        }
+    }
+}
+
+.paises{
+    
+    ul{
+        li{
+            display: contents;
+        }
+    }
+}
+
+
+.registro{
+    form{
+        border: 5px solid #ff6550;
+    }
+  
+}
+
+.redes{
+
+    background-color: $main-green;
+    
+    ul{
+        display: flex;
+        justify-content:space-around;
+    }
+
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }
+
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+        border-radius: 50%;
+    }
+    
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+        border-radius: 50%;
+    }
+
+    .fa-instagram {
+        background: #c13584;
+        color: white;
+        border-radius: 50%;
+    }
+}

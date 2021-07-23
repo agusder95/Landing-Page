@@ -1,0 +1,38 @@
+@import url(./_colors.scss);
+@mixin reset {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    *img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    li {
+        list-style: none;
+    }
+
+    main {
+        width: 100%;
+        height: 100%;
+        background: $main-white;
+     }
+
+    h2{
+        background-color: $main-green;
+        text-align: justify;
+    }
+
+}
+
+@mixin imageSize($width, $height) {
+    width: $width;
+    height: $height;
+}
