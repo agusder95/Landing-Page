@@ -1,13 +1,17 @@
 @import '../variables/_main.scss';
 @include reset;
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
 /* Mobile */
 @media screen and (min-width: 320px) {
+
     .centrar{
         margin: auto;
         max-width: 90rem;
         border-right: 5px groove rgba(182,182,182,0.61);
         border-left: 5px ridge rgba(182,182,182,0.61);
+        font-family: 'Open Sans', sans-serif;
     }
 
     header{
@@ -15,25 +19,25 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 0;
+        padding: .5rem 0;
         .imagen{
-            width: 6rem;
-            height: 3rem;
+            @include imageSize(7rem , 3rem);
         }
 
         .icon-mobile{
-            width: 2rem;
-            height: 2rem;
+            @include imageSize(2rem, 2rem);
         }
         
         nav{
             display: none;
+
         }
     }
 
     .banner{
         background-color: $main-green;
         h1{
+            font-family: 'PT Serif', serif;
             margin: 0; 
             padding: 1rem;
             text-align: center;
@@ -45,10 +49,11 @@
         }
 
         p{
+            font-family: 'Josefin Sans', sans-serif;
             font-size: 15px;
             position: absolute;
             background-color: $main-bk-font;
-            color: azure;
+            color: rgb(255, 255, 255);
             bottom: 25%;
         }
     }
@@ -106,6 +111,7 @@
             }
             #formulario{
                 padding: 1rem;
+                margin: 1rem;
                 text-align: center;
                 border-radius: 10px;
                 border: 5px solid #ff6550;
@@ -118,44 +124,135 @@
         }
     }
     .redes{
-
+        padding: .5rem ;
         background-color: $main-green;
-        
-        ul{
+
+        .cont-redes{
             display: flex;
-            justify-content:space-around;
-            padding: 0px;
+            flex-wrap: wrap;
+            max-width: 30rem;
             background-color: $main-green;
+            justify-content: center;
+            align-content: center;
+            margin: auto;
+            .soc-media{
+                display: flex;
+                justify-content:space-around;
+                padding: .5px;
+                background-color: $main-green;
+                
+                width: auto;
+                li{
+                    background-color: $main-green;
+                    @include imageSize(4rem, 4rem);
+                    margin: .5rem;
+                }
+            }
+        
+            .fa {
+                padding: 27%;
+                @include imageSize( 100%, 100%);
+                font-size: 30px;
+                text-align: center;
+                text-decoration: none;
+            }
+        
+            .fa-facebook {
+                background: #3B5998;
+                color: white;
+                border-radius: 50%;
+            }
+            
+            .fa-twitter {
+                background: #55ACEE;
+                color: white;
+                border-radius: 50%;
+            }
+        
+            .fa-instagram {
+                background: #c13584;
+                color: white;
+                border-radius: 50%;
+            }
+        }
+        .contacto{
             margin: 0;
+            padding: 1rem;
+            width: fit-content;
+            background-color: $main-green;
+
+            p{
+                background-color: $main-green;
+            }
+
             li{
                 background-color: $main-green;
             }
+
+            :nth-child(2){
+                display: flex;
+                background-color: $main-green;
+                p{
+                    margin: 1px;
+                }
+            }
+
         }
-    
-        .fa {
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-            text-decoration: none;
-            margin: 5px 2px;
+
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1024px) {
+    header{
+        .btn-group-mobile{
+            display: none;
+            padding: 1rem;
         }
-    
-        .fa-facebook {
-            background: #3B5998;
-            color: white;
-            border-radius: 50%;
+
+        nav{
+            display: block;
+            @include links;
+            ul{
+                padding: 0;
+                margin: 0;
+                display: flex;
+                background-color: $main-gray;
+                li{
+                    padding: 1rem;
+                    background-color: $main-gray;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        background-color: $main-gray;
+                    }
+                }
+            }
         }
-        
-        .fa-twitter {
-            background: #55ACEE;
-            color: white;
-            border-radius: 50%;
+    }
+
+    .banner{
+        p{
+            font-size: 25px;
+            position: absolute;
+            background-color: #7f98909e;
+            color: azure;
+            bottom: 40%;
         }
-    
-        .fa-instagram {
-            background: #c13584;
-            color: white;
-            border-radius: 50%;
+    }
+
+    .redes{
+        .cont-redes{
+            max-width: 60rem;
+            justify-content: space-between;
+            .soc-media{
+                justify-content: center;
+                width: auto;
+                li{
+                    margin: 1rem;
+                }
+            }
         }
+
     }
 }

@@ -7,7 +7,7 @@
         background: $main-white;
     }
 
-    html {
+    *html {
         scroll-behavior: smooth;
     }
 
@@ -16,7 +16,7 @@
         height: 100%;
     }
     
-    li {
+    *li {
         list-style: none;
     }
 
@@ -49,6 +49,17 @@
         }
     }
 
+}
+
+@mixin links {
+    a:hover{
+        color: #3d3d3d;
+    }
+
+    a:active{
+        color: darksalmon;
+    }
+    
 }
 
 @mixin imageSize($width, $height) {
