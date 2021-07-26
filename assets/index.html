@@ -14,14 +14,13 @@
 <body>
     <div class="centrar">
         <header>
-        
-            <div>
+            <div class="imagen" >
                 <img src="./img/Logo.png" alt="Logo">
             </div>
             <div class="btn-group-mobile">
                 <div class="btn-group" role="group">
                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary" data-bs-toggle="dropdown" aria-expanded="false">
-                       <div>
+                       <div class="icon-mobile">
                            <img src="./img/Hamburger_icon.png" alt="menu-mobile">
                         </div>
                     </button>
@@ -46,8 +45,8 @@
         <section class="banner">
             <h1>Hotel</h1>
             <div class="contenedor">
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget justo auctor, aliquam diam ac, posuere quam.</h3>
-                <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget justo auctor, aliquam diam ac, posuere quam.</p>
+                <div class="main">
                     <img src="./img/Main.jpg" alt="Main-image">
                 </div>
             </div>
@@ -131,33 +130,41 @@
     
         <section id="registro" class="registro">
             <h2>Registro</h2>
-            <p>Registrese para hacer su reserva en cualquier parte del mundo</p>
-            <form action=""method="POST" target="_self">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="Nombre">
-                <br><br>
-                <label for="apellido">Apellido:</label>
-                <input type="text" name="Apellido">
-                <br><br>
-                <label for="email">Email:</label>
-                <input type="email" name="Email">
-                <br><br>
-                <label for="naciionalidad">Nacionalidad:</label>
-                <input type="text" name="Pais">
-                <br><br>
-                <label for="fnacim">F. Nacimiento:</label>
-                <input type="date" name="f-nac">
-                <br><br>
-                <input type="submit" value="Enviar">
-           </form>
+            <div class="cont-registro">
+                <p>Registrese para hacer su reserva en cualquier parte del mundo</p>
+                <form id="formulario" action=""method="POST" target="_self">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="Nombre">
+                    <br><br>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="Apellido">
+                    <br><br>
+                    <label for="email">Dir. Email:</label>
+                    <input type="email" name="Email">
+                    <br><br>
+                    <label for="naciionalidad">Nacionalidad:</label>
+                    <input type="text" name="Pais">
+                    <br><br>
+                    <label for="fnacim">F. Nacimiento:</label>
+                    <input type="date" name="f-nac">
+                    <br><br>
+                    <input type="submit" value="Enviar">
+               </form>
+            </div>
         </section>
     
         <section id="redes" class="redes">
-            <ul>
-                <li><a href="" class="fa fa-twitter"></a> </li>
-                <li><a href="" class="fa fa-instagram"></a> </li>
-                <li><a href=""class="fa fa-facebook"></a> </li>
-            </ul>
+            <div class="cont-redes">
+                <ul class="soc-media">
+                    <li><a href="" class="fa fa-twitter"></a> </li>
+                    <li><a href="" class="fa fa-instagram"></a> </li>
+                    <li><a href=""class="fa fa-facebook"></a> </li>
+                </ul>
+                <ul class="contacto">
+                    <li><p>Tel: 4444444</p></li>
+                    <li><p>Mail:</p><a href="">contacto@contacto.com</a></li>
+                </ul>
+            </div>
         </section>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
